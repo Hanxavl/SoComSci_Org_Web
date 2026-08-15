@@ -1,9 +1,9 @@
 import './css/index.css'
 import './css/app.css'
 import { useState } from 'react';
-import Header from './components/Header';
+import Header from './components/HeaderTemp';
 import AboutModal from './components/AboutModal';
-import Body from './components/Body'
+import Body from './components/BodyTemp'
 
 function App() {
   // isAboutOpen has a truthy value of false
