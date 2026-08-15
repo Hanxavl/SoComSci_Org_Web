@@ -1,6 +1,6 @@
 import '../css/index.css'
 import '../css/body.css'
-import Carousel from './CarouselTemp'
+import Carousel from './Carousel'
 
 function Body(){
 	return(
