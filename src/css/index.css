@@ -1,0 +1,8 @@
+body{
+    background-color:#F7F5FB;
+    margin: 0;
+}
+
+img{
+    -webkit-user-drag: none;
+}

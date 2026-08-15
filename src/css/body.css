@@ -1,0 +1,79 @@
+.Main-Body-Container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.Body-Items{
+    width: 95%;
+    padding: 10px 40px 50px;
+}
+
+.Title-Card{
+    background-color: rgb(20, 17, 31);
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 28px;
+    padding: 34px 38px;
+    color: rgb(237, 234, 246);
+    margin: 20px 270.4px 0px;
+    border-radius: 15px;
+    font-weight: 600;
+    height: 90px;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.35);
+}
+
+.terminal-text{
+    display: inline-flex;
+    align-items: center;
+    margin: 0;
+}
+
+.terminal-dots{
+    display: flex;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.dot{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+.dot.red{ 
+    background-color: #ef4444;
+}
+
+.dot.yellow{ 
+    background-color: #eab308; 
+}
+
+.dot.green{ 
+    background-color: #10b981; 
+}
+
+/* the blinking cursor */
+.cursor{
+    display: inline-block;
+    width: 12px;                    /* Thickness of the cursor block */
+    height: 1.5em;                  /* Height relative to text size */
+    background-color: rgb(237, 234, 246);
+    
+    /* Steps(2, start) creates a crisp, instant terminal blink without fading */
+    animation: blink 1s steps(2, start) infinite;
+}
+
+@keyframes blink {
+    to {
+        visibility: hidden;
+    }
+}
+
+.short-desc{
+    font-family: Literata, serif;
+    font-size: 16px;
+    text-align: center;
+    margin: 22px 440.4px 0px;
+    color: rgba(27, 24, 48, 0.6);
+}
