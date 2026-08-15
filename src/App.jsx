@@ -3,7 +3,7 @@ import './css/app.css'
 import { useState } from 'react';
 import Header from './components/Header';
 import AboutModal from './components/AboutModal';
-import Body from './components/body'
+import Body from './components/Body'
 
 function App() {
   // isAboutOpen has a truthy value of false
