@@ -2,6 +2,7 @@ import '../css/index.css';
 import '../css/aboutModal.css';
 import instaQR from '../assets/header/insta.jpg';
 import fbQR from '../assets/header/fb.jpg'
+import tiktokQR from '../assets/header/tiktok.jpg'
 
 function AboutModal({ isOpen, onClose }) {
   if (!isOpen){
@@ -31,6 +32,11 @@ function AboutModal({ isOpen, onClose }) {
             <img src={instaQR} alt="SoComSci Facebook QR" className="qr-image" />
             <span>Instagram</span>
           </div>
+
+          <div className="qr-card">
+            <img src={tiktokQR} alt="SoComSci Facebook QR" className="qr-image" />
+            <span>TikTok</span>
+          </div>
         </div>
 
         <div className="social-links">
@@ -42,6 +48,11 @@ function AboutModal({ isOpen, onClose }) {
             <a href="https://www.instagram.com/upsocomsci?igsh=c25vbDdsNzc1bWw0" target="_blank" rel="noreferrer">
               Instagram
             </a>
+
+            <a href="https://www.tiktok.com/@upsocomsci?_r=1" target="_blank" rel="noreferrer">
+              TikTok
+            </a>
+
 						<a href="https://www.linkedin.com/company/upsocomsci/" target="_blank" rel="noreferrer">
               LinkedIn
             </a>

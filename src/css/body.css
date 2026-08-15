@@ -15,17 +15,20 @@
     font-size: 28px;
     padding: 34px 38px;
     color: rgb(237, 234, 246);
-    margin: 20px 270.4px 0px;
     border-radius: 15px;
     font-weight: 600;
-    height: 90px;
     align-items: center;
     justify-content: center;
     box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.35);
+    min-height: 110px;
+    width: 100%;
+    max-width: 1050px;
+    margin: 20px auto 0px;
+    box-sizing: border-box;
 }
 
 .terminal-text{
-    display: inline-flex;
+    display: inline;
     align-items: center;
     margin: 0;
 }
@@ -57,14 +60,15 @@
 .cursor{
     display: inline-block;
     width: 12px;                    /* Thickness of the cursor block */
-    height: 1.5em;                  /* Height relative to text size */
+    height: 1.2em;                  /* Height relative to text size */
     background-color: rgb(237, 234, 246);
-    
+    vertical-align: text-bottom;
+    margin-left: 6px;
     /* Steps(2, start) creates a crisp, instant terminal blink without fading */
     animation: blink 1s steps(2, start) infinite;
 }
 
-@keyframes blink {
+@keyframes blink{
     to {
         visibility: hidden;
     }

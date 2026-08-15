@@ -2,17 +2,19 @@ import { useState } from 'react'
 import '../css/index.css'
 import '../css/carousel.css'
 
+// org photos
+import firstPic from '../assets/carousel/1.jpg'
+import secondPic from '../assets/carousel/2.png'
+import thirdPic from '../assets/carousel/3.png'
+import fourthPic from '../assets/carousel/4.JPG'
+import fifthPic from '../assets/carousel/5.jpg'
+
 const slides = [
-	{id: 1, label: 'ORG PHOTO - 01', image: ''},
-	{id: 2, label: 'ORG PHOTO - 02', image: ''},
-	{id: 3, label: 'ORG PHOTO - 03', image: ''},
-	{id: 4, label: 'ORG PHOTO - 04', image: ''},
-	{id: 5, label: 'ORG PHOTO - 05', image: ''},
-	{id: 6, label: 'ORG PHOTO - 06', image: ''},
-	{id: 7, label: 'ORG PHOTO - 07', image: ''},
-	{id: 8, label: 'ORG PHOTO - 08', image: ''},
-	{id: 9, label: 'ORG PHOTO - 09', image: ''},
-	{id: 10, label: 'ORG PHOTO - 10', image: ''},
+	{id: 1, label: 'ORG-PHOTO 1', image: firstPic},
+	{id: 2, label: 'ORG-PHOTO 2', image: secondPic},
+	{id: 3, label: 'ORG-PHOTO 3', image: thirdPic},
+	{id: 4, label: 'ORG-PHOTO 4', image: fourthPic},
+	{id: 5, label: 'ORG-PHOTO 5', image: fifthPic},
 ];
 
 function Carousel(){
@@ -57,7 +59,6 @@ function Carousel(){
 						/>
 					)}
 
-					<p className='carousel-label'>{slides[currentIndex].label}</p>
 				</div>
 
 				<button className='carousel-btn' onClick={handleNext}>

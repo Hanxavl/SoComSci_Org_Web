@@ -37,7 +37,7 @@
 .carousel-btn:hover {
     background-color: #f8fafc;
     transform: scale(1.05);
-    border-color: #cbd5e1;
+    border-color: #581825;
 }
 
 /* Maroon Card Box */
@@ -74,7 +74,7 @@
     font-size: 0.95rem;
     letter-spacing: 2px;
     position: relative;
-    z-index: 1;
+    z-index: -1;
 }
 
 /* Dots Navigation */
