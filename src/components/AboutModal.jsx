@@ -59,7 +59,7 @@ function AboutModal({ isOpen, onClose }) {
               TikTok
             </a>
 
-            <a href=" " target="_blank" rel="noreferrer">
+            <a href="https://x.com/upsocomsci" target="_blank" rel="noreferrer">
               Twitter
             </a>
 
