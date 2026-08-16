@@ -1,6 +1,7 @@
 import '../css/index.css'
 import '../css/header.css'
 import UPLogo from '../assets/header/UP Manila Logo.png'
+import whiteDPSMLogo from '../assets/header/dpsm.jpg'
 import orgLogo from '../assets/header/SOCOMSCI.png'
 
 function Header({onOpenAbout}) {
@@ -19,7 +20,10 @@ function Header({onOpenAbout}) {
   return (
     <header className='main-header-container'>
       <div className='header-items'>
-        <img src={UPLogo} alt="UP Logo" />
+        <img src={UPLogo} alt="UP Logo"/>
+
+        {/* just remove this if unnessary */}
+        <img className='whiteDPSM' src={whiteDPSMLogo} alt="UP Logo"/>
 				<img src={orgLogo} alt="SoComSci Logo"/> 
         <h1 className='title'>SoComShop</h1>
       </div>
@@ -28,7 +32,7 @@ function Header({onOpenAbout}) {
         <p onClick={() => scrollToSection('home')}>&gt; Home</p>
         <p onClick={() => scrollToSection('games')}>&gt; Games</p>
         <p onClick={onOpenAbout}>&gt; About</p>
-        <button>Light Mode</button>
+        <button>Dark Mode</button>
       </div>
 
     </header>

@@ -3,6 +3,7 @@ import '../css/aboutModal.css';
 import instaQR from '../assets/header/insta.jpg';
 import fbQR from '../assets/header/fb.jpg'
 import tiktokQR from '../assets/header/tiktok.jpg'
+import twtQR from '../assets/header/twt.png'
 
 function AboutModal({ isOpen, onClose }) {
   if (!isOpen){
@@ -37,6 +38,11 @@ function AboutModal({ isOpen, onClose }) {
             <img src={tiktokQR} alt="SoComSci Facebook QR" className="qr-image" />
             <span>TikTok</span>
           </div>
+
+          <div className="qr-card">
+            <img src={twtQR} alt="SoComSci Facebook QR" className="qr-image" />
+            <span>Twitter</span>
+          </div>
         </div>
 
         <div className="social-links">
@@ -51,6 +57,10 @@ function AboutModal({ isOpen, onClose }) {
 
             <a href="https://www.tiktok.com/@upsocomsci?_r=1" target="_blank" rel="noreferrer">
               TikTok
+            </a>
+
+            <a href=" " target="_blank" rel="noreferrer">
+              Twitter
             </a>
 
 						<a href="https://www.linkedin.com/company/upsocomsci/" target="_blank" rel="noreferrer">

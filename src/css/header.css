@@ -1,12 +1,12 @@
 .main-header-container{
+    background-color: #14111F;
     display: flex;
     flex-direction: row;
     height: 40px;
     padding: 22px 40px;
-    border-radius: 18px;
     border-bottom: none;
-    background-image: radial-gradient(circle, #94a3b8 1px, transparent 1px);
-    background-size: 12px 2px;             /* Controls dot spacing (8px width) and height (2px) */
+    background-image: radial-gradient(circle, #EDEAF6 1px, transparent 1px);
+    background-size: 10px 2px;             /* Controls dot spacing (8px width) and height (2px) */
     background-position: bottom;
     background-repeat: repeat-x;
 }
@@ -35,7 +35,7 @@
 
 .title{
     font-family: Space Grotesk;
-    color: #1B1830;
+    color: #EDEAF6;
     font-size: 25px;
     font-weight: 700;
     max-width: 800px;
@@ -44,7 +44,7 @@
 
 .nav-links p{
     font-family: Literata;
-    color: #1B1830;
+    color: #EDEAF6;
     font-size: 15px;
     font-weight: 600;
     cursor: pointer;
@@ -53,7 +53,7 @@
 }
 
 .nav-links p:hover{
-    opacity: 0.7;
+    opacity: 0.5;
 }
 
 .nav-links button{
@@ -70,5 +70,11 @@
     font-weight: 400;
     height: 31.6px;
     width: 118.65px;
+    border-radius: 999px;
+}
+
+
+/* just remove if deemed unnessary */
+.whiteDPSM{
     border-radius: 999px;
 }

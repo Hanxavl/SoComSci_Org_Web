@@ -99,8 +99,8 @@
 }
 
 .qr-image{
-    width: 199px;          
-    height: 199px;         
+    width: 200px;          
+    height: 200px;         
     object-fit: contain;
     border-radius: 8px;
     border: 1px solid #e2e8f0;
