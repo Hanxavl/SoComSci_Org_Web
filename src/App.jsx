@@ -3,7 +3,9 @@ import './css/app.css'
 import { useState } from 'react';
 import Header from './components/Header';
 import AboutModal from './components/AboutModal';
-import Body from './components/Body'
+import Body from './components/Body';
+import Games from './components/Games';
+import Footer from './components/Footer';
 
 function App() {
   // isAboutOpen has a truthy value of false
@@ -19,8 +21,10 @@ function App() {
       </section>
 
       <section id="games">
-        {/* Connect 4 and Tarot Card components will sit here */}
+        <Games/>
       </section>
+
+      <Footer/>
 
       {/* About Modal Popup */}
       <AboutModal 

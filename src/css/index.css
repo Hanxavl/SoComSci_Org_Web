@@ -7,3 +7,7 @@ body{
 img{
     -webkit-user-drag: none;
 }
+
+p, h2, h3{
+    -webkit-font-smoothing: antialiased;
+}

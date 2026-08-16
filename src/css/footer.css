@@ -1,0 +1,17 @@
+.footer-container{
+    display: flex;
+    padding: 30px 40px 40px;
+    background-color: #14111F;
+    justify-content: center;
+    border-top: none;
+    background-image: radial-gradient(circle, #EDEAF6 1px, transparent 1px);
+    background-size: 10px 2px;             /* Controls dot spacing (8px width) and height (2px) */
+    background-position: top;
+    background-repeat: repeat-x;
+}
+
+.footer-container p{
+    margin: 0;
+    color: #EDEAF6;
+    font-family: "IBM Plex Mono", monospace;
+}
