@@ -4,6 +4,9 @@
     min-height: 100vh;
     background-color: #14111F;
     box-sizing: border-box;
+    background-image: radial-gradient(rgba(255, 255, 255, 0.1) 1.5px, transparent 1.5px);
+    background-size: 25px 25px; 
+    box-sizing: border-box;
 }
 
 /* HEADER */
@@ -13,7 +16,7 @@
     height: 40px;
     padding: 22px 40px;
     background-color: #14111F;
-    border-bottom: 1px solid rgba(237, 234, 246, 0.2);
+    border-bottom: 1px solid rgba(237, 234, 246, 0.1);
 }
 
 .header-items{
