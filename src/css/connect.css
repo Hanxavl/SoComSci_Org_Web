@@ -1,0 +1,206 @@
+.connect-container{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #14111F;
+    box-sizing: border-box;
+}
+
+/* HEADER */
+.connect-header{
+    display: flex;
+    flex-direction: row;
+    height: 40px;
+    padding: 22px 40px;
+    background-color: #14111F;
+    border-bottom: 1px solid rgba(237, 234, 246, 0.2);
+}
+
+.header-items{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex: 1;
+    gap: 15px;
+}
+
+.back-btn{
+    padding: 8px 14px;
+    cursor: pointer;
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 12.5px;
+    font-weight: 400;
+    color: #EDEAF6;
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.06);
+    transition: background 0.2s ease, transform 0.15s ease;
+}
+
+.back-btn:hover{
+    transform: translate(-3px);
+    background-color: rgba(237, 234, 246, 0.2);
+}
+
+.game-title{
+    font-family: Space Grotesk, sans-serif;
+    font-weight: 700;
+    font-size: 17px;
+    color: #EDEAF6;
+}
+
+.reset-btn{
+    font-family: "IBM Plex Mono", monospace;
+    background: transparent;
+    font-size: 12.5px;
+    padding: 9px 18px;
+    cursor: pointer;
+    border-radius: 999px;
+    font-weight: 600;
+    color: #B8901F;
+    letter-spacing: 0.03em;
+    transition: background 0.2s ease, transform 0.15s ease;
+    border: 1px solid #B8901F;
+}
+
+.reset-btn:hover{
+    transform: translateY(-1.2px);
+    background-color: rgba(184, 144, 31, 0.2);
+}
+
+.turn-indicator, .winner-announcement{
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 13.5px;
+    color: #EDEAF6;
+    font-weight: 500;
+}
+
+.turn-dot{
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin-right: 8px;
+    transition: background-color 0.3 ease;
+}
+
+.turn-dot.player1{
+    background-color: #C24A55;
+    box-shadow: 0 0 12px 2px #C24A55;
+}
+
+.turn-dot.player2{
+    background-color: #2E6CD1;
+    box-shadow: 0 0 12px 2px #2E6CD1;
+}
+
+/* GAME */
+.board-wrapper{
+    display: flex;
+    position: relative;
+    width: max-content;
+    margin: 40px auto;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.board{
+    position: relative;
+    overflow: visible;
+    display: flex;
+    flex-direction: column;
+    gap: 1vmin;
+    background-color: #14213A;
+    padding: 1.5vmin;
+    border-radius: 25px;
+    width: max-content;
+    gap: 1vmin;
+    border: solid 5px #B8901F;
+}
+
+.board-row{
+    display: flex;
+    gap: 1vmin; /* gap scales dynamically with window size */
+}
+
+.board-cell{
+    position: relative;
+    background-color: #0D1728;
+    border-radius: 50%;
+    /* Clamp sets a min (35px), responsive target (8.5% of smallest viewport side), and max (75px) */
+    width: clamp(35px, 8.5vmin, 75px);
+    height: clamp(35px, 8.5vmin, 75px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background 0.2s ease, transform 0.15s ease;
+}
+
+.board-cell:hover{
+    background-color:  rgba(237, 234, 246, 0.2);
+}
+
+.disc{
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+}
+
+.disc.player1{
+    background: radial-gradient(circle at 35% 30%, #C24A55, #7A1F2B 55%, #4A1119 100%);
+}
+
+.disc.player2{
+    background: radial-gradient(circle at 35% 30%, #5BA2FF, #1E4FA3 55%, #0F2552 100%);
+}
+
+/* WINNER OVERLAY */
+.winner-overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(20, 17, 31, 0.7);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 25px;
+    z-index: 10;
+    backdrop-filter: blur(2px);
+}
+
+.winner-text{
+    font-family: Space Grotesk, sans-serif;
+    font-size: 40px;
+    font-weight: 700;
+    color: #EDEAF6;
+}
+
+.play-again-btn{
+    background-color: rgb(184, 144, 31);
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 14.5px;
+    font-weight: 700;
+    border-radius: 999px;
+    padding: 9px 18px;
+    border: none;
+    cursor: pointer;
+    transition: background 0.2s ease, transform 0.15s ease;
+}
+
+.play-again-btn:hover{
+    transform: translateY(-2px);
+    background-color: rgb(248, 210, 104);
+}
+
+.board-cell.winning-cell{
+    outline: 3px solid #B8901F;
+    outline-offset: -1px;
+    box-shadow: 0 0 20px 6px rgba(184, 144, 31, 0.8);
+    z-index: 5; 
+}

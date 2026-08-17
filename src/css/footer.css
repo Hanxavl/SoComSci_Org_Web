@@ -3,11 +3,7 @@
     padding: 30px 40px 40px;
     background-color: #14111F;
     justify-content: center;
-    border-top: none;
-    background-image: radial-gradient(circle, #EDEAF6 1px, transparent 1px);
-    background-size: 10px 2px;             /* Controls dot spacing (8px width) and height (2px) */
-    background-position: top;
-    background-repeat: repeat-x;
+    border-top: 1px solid rgba(237, 234, 246, 0.2);
 }
 
 .footer-container p{

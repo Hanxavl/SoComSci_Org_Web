@@ -3,7 +3,7 @@ import '../css/games.css'
 import tarotCardDisplay from '../assets/gamesImg/tarot_display_image.png'
 import connectDisplay from '../assets/gamesImg/connect4_display_image.png'
 
-function Games(){
+function Games({ onPlayConnect, onPlayTarot }){
     return(
       <div className='Main-Games-Container'>
         <div className='Games-Items-top'>
@@ -12,7 +12,9 @@ function Games(){
         </div>
 
         <div className='Games-Items-bot'>
-          <div className='container-card'>
+
+          {/* CHAROT TELLING CARDS */}
+          <div className='container-card' onClick={onPlayTarot}>
             {/* handles image of game */}
             <div className='card-image-container'>
               <img src={tarotCardDisplay} alt="Tarot Card Display" />
@@ -40,7 +42,8 @@ function Games(){
             </div>
           </div>
 
-          <div className='container-card'>
+          {/* CONNECT 4 */}
+          <div className='container-card' onClick={onPlayConnect}>
             {/* handles image of game */}
             <div className='card-image-container'>
               <img src={connectDisplay} alt="Connect 4 Display" />

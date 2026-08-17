@@ -4,11 +4,7 @@
     flex-direction: row;
     height: 40px;
     padding: 22px 40px;
-    border-bottom: none;
-    background-image: radial-gradient(circle, #EDEAF6 1px, transparent 1px);
-    background-size: 10px 2px;             /* Controls dot spacing (8px width) and height (2px) */
-    background-position: bottom;
-    background-repeat: repeat-x;
+    border-bottom: 1px solid rgba(237, 234, 246, 0.2);
 }
 
 .header-items{
@@ -72,7 +68,6 @@
     width: 118.65px;
     border-radius: 999px;
 }
-
 
 /* just remove if deemed unnessary */
 .whiteDPSM{

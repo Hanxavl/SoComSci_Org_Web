@@ -29,9 +29,9 @@ function Header({onOpenAbout}) {
       </div>
 
       <div className='header-items nav-links'>
-        <p onClick={() => scrollToSection('home')}>&gt; Home</p>
-        <p onClick={() => scrollToSection('games')}>&gt; Games</p>
-        <p onClick={onOpenAbout}>&gt; About</p>
+        <p onClick={() => scrollToSection('home')}>&rsaquo; Home</p>
+        <p onClick={() => scrollToSection('games')}>&rsaquo; Games</p>
+        <p onClick={onOpenAbout}>&rsaquo; About</p>
         <button>Dark Mode</button>
       </div>
 

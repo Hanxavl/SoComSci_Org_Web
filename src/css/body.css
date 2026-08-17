@@ -3,6 +3,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    min-height: calc(100vh - 84px);
+    box-sizing: border-box;
 }
 .Body-Items{
     width: 95%;
@@ -78,6 +80,7 @@
     font-family: Literata, serif;
     font-size: 16px;
     text-align: center;
-    margin: 22px 440.4px 0px;
+    margin: 22px auto 0px;
+    max-width: 600px;
     color: rgba(27, 24, 48, 0.6);
 }

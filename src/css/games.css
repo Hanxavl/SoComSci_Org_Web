@@ -40,7 +40,7 @@
 
 .container-card:hover{
     /* moves the card up by 10px */
-    transform: translate(-10px);
+    transform: translateY(-10px);
     box-shadow: 0 20px 40px -10px rgba(27, 24, 48, 0.15);
     border: solid 1px rgba(27, 24, 48, 0.2);
 }
@@ -163,9 +163,9 @@
 }
 
 .player-circle.red{
-    background-color: #721C24;
+    background-color: #C24A55;
 }
 
 .player-circle.blue{
-    background-color: #3162C7;
+    background-color: #2E6CD1;
 }
