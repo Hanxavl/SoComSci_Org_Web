@@ -1,4 +1,7 @@
 .main-header-container{
+    position: sticky;
+    top: 0;
+    z-index: 10000;
     background-color: #14111F;
     display: flex;
     flex-direction: row;
@@ -52,11 +55,11 @@
     opacity: 0.5;
 }
 
-.nav-links button{
+.theme-toggle-btn{
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    /* gap: 8px; for image*/
+    font-size: 12px;
     padding: 7px 16px;
     background-color: #ffffff;
     border: 1px solid #e2e8f0;
@@ -65,7 +68,7 @@
     font-family: "IBM Plex Mono", monospace;
     font-weight: 400;
     height: 31.6px;
-    width: 118.65px;
+    width: 130px;
     border-radius: 999px;
 }
 

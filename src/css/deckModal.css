@@ -1,0 +1,247 @@
+/* MODAL OVERLAY */
+.deck-overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    animation: fadeIn 0.25s ease-out forwards;
+}
+
+/* MODAL CONTAINER - Dark Theme */
+.deck-modal-content{
+    font-family: 'Space Grotesk', sans-serif;
+    background: #1A1A24;
+    border-radius: 16px;
+    width: 90%;
+    max-width: 850px;
+    height: 80vh;
+    max-height: 650px;
+    position: relative;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    animation: popUp 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes fadeIn{
+    from{ 
+        opacity: 0; 
+    }
+    to{ 
+        opacity: 1; 
+    }
+}
+
+@keyframes popUp{
+    from{ 
+        opacity: 0; transform: scale(0.92) translateY(12px); 
+    }
+    to{ 
+        opacity: 1; transform: scale(1) translateY(0); 
+    }
+}
+
+/* HEADER */
+.deck-modal-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 32px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.deck-modal-header h2{
+    margin: 0;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.deck-close-btn{
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #fff;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.deck-modal-close-btn:hover{
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.deck-modal-body{
+    padding: 24px 32px;
+    overflow-y: auto;
+    flex: 1;
+}
+
+/* Custom Webkit Scrollbar */
+.deck-modal-body::-webkit-scrollbar{
+    width: 8px;
+}
+.deck-modal-body::-webkit-scrollbar-track{
+    background: transparent;
+}
+.deck-modal-body::-webkit-scrollbar-thumb{
+    background: #ccc;
+    border-radius: 10px;
+}
+
+/* TIER SECTIONS */
+.deck-tier-section{
+    margin-bottom: 32px;
+}
+
+.deck-tier-title{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    letter-spacing: 1px;
+    margin-bottom: 16px;
+    font-family: monospace;
+}
+
+.deck-tier-count{
+    color: rgba(255, 255, 255, 0.4);
+}
+
+.deck-tier-dot{
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    display: inline-block;
+    box-shadow: 0 0 8px currentColor;
+}
+
+/* CARD GRID */
+.deck-card-grid{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.deck-card-item{
+    background: rgba(0, 0, 0, 0.2);
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    transition: all 0.2s ease;
+}
+
+.deck-card-item:hover{
+    transform: translateY(-2px);
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* DYNAMIC COLORS - Hooked up to React Template Literals */
+.tier-text-lucky{ color: #FFD700; }
+.tier-bg-lucky{ background-color: #FFD700; }
+.tier-border-lucky{ border: 1px solid #FFD700; }
+
+.tier-text-mythical{ color: #EF4444; }
+.tier-bg-mythical{ background-color: #EF4444; }
+.tier-border-mythical{ border: 1px solid #EF4444; }
+
+.tier-text-legendary{ color: #F97316; }
+.tier-bg-legendary{ background-color: #F97316; }
+.tier-border-legendary{ border: 1px solid #F97316; }
+
+.tier-text-veryrare{ color: #A855F7; }
+.tier-bg-veryrare{ background-color: #A855F7; }
+.tier-border-veryrare{ border: 1px solid #A855F7; }
+
+.tier-text-rare{ color: #3B82F6; }
+.tier-bg-rare{ background-color: #3B82F6; }
+.tier-border-rare{ border: 1px solid #3B82F6; }
+
+.tier-text-uncommon{ color: #22C55E; }
+.tier-bg-uncommon{ background-color: #22C55E; }
+.tier-border-uncommon{ border: 1px solid #22C55E; }
+
+.tier-text-common{ color: #FFFFFF; }
+.tier-bg-common{ background-color: #FFFFFF; }
+.tier-border-common{ border: 1px solid rgba(255, 255, 255, 0.4); }
+
+/* CARD PREVIEW OVERLAY */
+.card-preview-overlay{
+    position: absolute;
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 100%;
+    background: rgba(26, 26, 36, 0.9);
+    backdrop-filter: blur(5px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+    animation: fadeIn 0.2s ease-out;
+}
+
+.card-preview-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+}
+
+.card-preview-img{
+    height: 50vh; 
+    max-height: 380px;
+    border-radius: 14px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.8);
+    animation: popUp 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.card-preview-info{
+    text-align: center;
+    animation: popUp 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    animation-delay: 0.05s;
+    opacity: 0;
+}
+
+.card-preview-name{
+    margin: 0 0 6px 0;
+    font-size: 22px;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.card-preview-tier{
+    margin: 0;
+    font-size: 13px;
+    letter-spacing: 1.5px;
+    font-weight: 600;
+}
+
+/* Pop-up Close Button */
+.preview-close-btn{
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #fff;
+    padding: 8px 24px;
+    border-radius: 20px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background 0.2s;
+    animation: popUp 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    animation-delay: 0.1s;
+    opacity: 0;
+}
+
+.preview-close-btn:hover{
+    background: rgba(255, 255, 255, 0.1);
+}

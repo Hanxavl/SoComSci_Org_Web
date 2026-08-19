@@ -3,8 +3,84 @@
     -webkit-user-drag: none;
 }
 
+:root{
+    --bg-page: #f4f3f8;
+    --bg-card: #ffffff;
+    --border-card: rgba(27, 24, 48, 0.1);
+    --text-main: #1b1830;
+    --text-sub: rgba(27, 24, 48, 0.62);
+    --tier-text-main: #1b1830;
+    --chip-bg: rgba(27, 24, 48, 0.05);
+    --card-hover-shadow: 0 20px 40px -10px rgba(27, 24, 48, 0.15);
+}
+
+body.dark-mode{
+    --bg-page: #141121;
+    --bg-card: #17132b;
+    --border-card: rgba(255, 255, 255, 0.1);
+    --text-main: #edeaf6;
+    --text-sub: rgba(237, 234, 246, 0.75);
+    --tier-text-main: #edeaf6;
+    --chip-bg: rgba(255, 255, 255, 0.08);
+    --card-hover-shadow: 0 20px 40px -10px rgba(255, 255, 255, 0.06);
+}
+
+body.dark-mode .Title-Card {
+    border: 2px solid #F7F5FB;
+}
+
 body{
-    background-color:#F7F5FB;
+    background-color:#F7F5FB;  /* other option is #F7F5FB*/
     margin: 0;
     overflow-x: hidden;
+    background-color: var(--bg-page);
+    color: var(--text-main);
+    transition: background-color 0.3s ease, color 0.3s ease;
+    margin: 0;
+}
+
+.container-card{
+    background-color: var(--bg-card);
+    border: solid 1px var(--border-card);
+    transition: background-color 0.3s ease, border 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.container-card:hover {
+    box-shadow: var(--card-hover-shadow) !important;
+    border: solid 1px var(--border-card) !important;
+}
+
+.Games-Items-top h2, .card-text-container h3{
+    color: var(--text-main);
+}
+
+/* Paragraphs and legend text */
+.short-desc,
+.card-text-container p,
+.player-item p{
+    color: var(--text-sub) !important; /* !important overrides any hardcoded color in games.css */
+}
+
+.tier-chip{
+    background-color: var(--chip-bg);
+    border-color: var(--border-card);
+    color: var(--tier-text-main) !important;
+}
+
+::-webkit-scrollbar{
+    width: 8px;
+
+}
+
+::-webkit-scrollbar-track{
+    background: #0f0c1b;
+}
+
+::-webkit-scrollbar-thumb{
+    background: #ecf2f2; 
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background: #D3D3D3;
 }

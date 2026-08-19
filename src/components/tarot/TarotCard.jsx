@@ -1,6 +1,7 @@
-import { useState, useEffect } from 'react';
-import tarotBackCard from '../../assets/charotCards/back/tarot_card_back_single.png';
+import { useState, useEffect } from 'react'
+import '../../css/index.css';
 import '../../css/tarotCard.css'
+import tarotBackCard from '../../assets/charotCards/back/tarot_card_back_single.png'
 
 function TarotCard({ cardData, style, isFanned }){
 

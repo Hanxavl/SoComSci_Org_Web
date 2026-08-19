@@ -40,3 +40,19 @@ export const CARDS = cardsJSON.map(c => ({
     tier: TIER_BY_ID[c.id],
     frontImg: new URL(`../assets/charotCards/front/${c.card_source}`, import.meta.url).href
 }));
+
+
+
+/*
+
+The CARDS function will have objects containing this data
+
+{
+    id: "01",
+    name: "Ash Baby",
+    card_source: "01_ashbaby.png",
+    tier: "rare", // <-- Attached dynamically via TIER_BY_ID[c.id]
+    frontImg: "http://localhost:5173/src/assets/charotCards/front/01_ashbaby.png"
+}
+
+*/

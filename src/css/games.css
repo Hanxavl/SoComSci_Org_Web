@@ -1,7 +1,11 @@
 .Main-Games-Container{
     display: flex;
     flex-direction: column;
-    padding: 30px 40px 60px;
+    padding: 30px 40px 30px;
+    justify-content: center;
+    min-height: calc(100vh - 130px);
+    box-sizing: border-box;
+    scroll-margin-top: 84px;
 }
 
 .Games-Items-top p{

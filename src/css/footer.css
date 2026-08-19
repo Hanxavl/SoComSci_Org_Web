@@ -1,6 +1,6 @@
 .footer-container{
     display: flex;
-    padding: 30px 40px 40px;
+    padding: 20px 40px 20px;
     background-color: #14111F;
     justify-content: center;
     border-top: 1px solid rgba(237, 234, 246, 0.1);
@@ -10,4 +10,5 @@
     margin: 0;
     color: #EDEAF6;
     font-family: "IBM Plex Mono", monospace;
+    font-size: 12px;
 }

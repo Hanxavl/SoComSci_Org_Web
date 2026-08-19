@@ -3,15 +3,19 @@ import '../css/index.css'
 import '../css/tarot.css'
 import Footer from './Footer'
 import TarotCard from './tarot/TarotCard.jsx'
+import DeckModal from './tarot/DeckModal.jsx'
 import { CARDS } from '../data/cardData.js'
+import { drawWeightedCards } from '../utils/weightedDraw.js'
 
 function Tarot({ onBack }){
-  // game state toggles between cards stacked (false) and fanned (true)
-  const [hasPlayed, setHasPlayed] = useState(false)
+  // REACT HOOKS FOR DECK MODAL
+  const [isDeckModal, setIsDeckModal] = useState(false);
 
-  const [drawnCards, setDrawnCards] = useState([]) // this stores 5 active cards
 
-  const shuffleTimerRef = useRef(null) // create a reference to hold our timer
+  // GAME STATE FOR CARDS
+  const [hasPlayed, setHasPlayed] = useState(false)   // game state toggles between cards stacked (false) and fanned (true)
+  const [drawnCards, setDrawnCards] = useState([])    // this stores 5 active cards
+  const shuffleTimerRef = useRef(null)                // create a reference to hold our timer
 
   const handlePlay = () => {
 
@@ -19,10 +23,8 @@ function Tarot({ onBack }){
     if (shuffleTimerRef.current){
       clearTimeout(shuffleTimerRef.current);
     }
-
-    const shuffledDeck = [...CARDS].sort(() => 0.5 - Math.random()) // shuffle the entire deck randomly
     
-    const topFive = shuffledDeck.slice(0,5) // take the top 5 cards
+    const topFive = drawWeightedCards(CARDS, 5);
 
     // store them in setDrawnCards and trigger the fan animation
     setDrawnCards(topFive);
@@ -75,7 +77,7 @@ function Tarot({ onBack }){
 
         <div className='tarot-header-items right'>
           {/* BUTTONS */}
-          <button className='view-deck-btn'>🂠 View Full Deck</button>
+          <button className='view-deck-btn' onClick={() => setIsDeckModal(true)}>🂠 View Full Deck</button>
           {!hasPlayed ? (
             <button className='shuffle-btn' onClick={handlePlay}>
               ▶ Play
@@ -103,6 +105,12 @@ function Tarot({ onBack }){
       </div>
 
       <Footer/>
+
+      {/* Deck Modal Popup */}
+      <DeckModal
+        isOpen={isDeckModal}
+        onClose={() => setIsDeckModal(false)}
+      />
     </div>
   )
 }
