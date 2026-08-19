@@ -29,6 +29,10 @@ body.dark-mode .Title-Card {
     border: 2px solid #F7F5FB;
 }
 
+body.dark-mode .carousel-card{
+    box-shadow: 0 10px 35px -5px rgba(255, 255, 255, 0.2);
+}
+
 body{
     background-color:#F7F5FB;  /* other option is #F7F5FB*/
     margin: 0;
