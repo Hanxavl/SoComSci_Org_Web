@@ -34,8 +34,9 @@ const TIER_BY_ID = {
     '31': 'lucky',        // Lucky
 }
 
+// Combines the raw JSON data with its assigned rarity tier and dynamically resolves the image path for Vite.
 export const CARDS = cardsJSON.map(c => ({
     ...c,
     tier: TIER_BY_ID[c.id],
-    frontImg: require(`../assets/charotCards/front/${c.card_source}`)
+    frontImg: new URL(`../assets/charotCards/front/${c.card_source}`, import.meta.url).href
 }));

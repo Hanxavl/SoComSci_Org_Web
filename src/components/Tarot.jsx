@@ -1,12 +1,42 @@
-import { useState } from 'react'
+import { useState, useRef } from 'react'
 import '../css/index.css'
 import '../css/tarot.css'
 import Footer from './Footer'
-import tarotBackCard from '../assets/charotCards/back/tarot_card_back_single.png'
+import TarotCard from './tarot/TarotCard.jsx'
+import { CARDS } from '../data/cardData.js'
 
 function Tarot({ onBack }){
   // game state toggles between cards stacked (false) and fanned (true)
   const [hasPlayed, setHasPlayed] = useState(false)
+
+  const [drawnCards, setDrawnCards] = useState([]) // this stores 5 active cards
+
+  const shuffleTimerRef = useRef(null) // create a reference to hold our timer
+
+  const handlePlay = () => {
+
+    // if a shuffle timer is currently ticking down, stop it
+    if (shuffleTimerRef.current){
+      clearTimeout(shuffleTimerRef.current);
+    }
+
+    const shuffledDeck = [...CARDS].sort(() => 0.5 - Math.random()) // shuffle the entire deck randomly
+    
+    const topFive = shuffledDeck.slice(0,5) // take the top 5 cards
+
+    // store them in setDrawnCards and trigger the fan animation
+    setDrawnCards(topFive);
+    setHasPlayed(true);
+  }
+
+  const handleShuffle = () => {
+    setHasPlayed(false); // go back to stack card animation
+    
+    // // Delay clearing the cards until the 600ms stacking animation completes
+    shuffleTimerRef.current =  setTimeout(() => {
+      setDrawnCards([]);
+    }, 600)
+  }
 
   // helper function to calculate inline style for the stack or fan
   const getCardStyle = (index) => {
@@ -47,11 +77,11 @@ function Tarot({ onBack }){
           {/* BUTTONS */}
           <button className='view-deck-btn'>🂠 View Full Deck</button>
           {!hasPlayed ? (
-            <button className='shuffle-btn' onClick={() => setHasPlayed(true)}>
+            <button className='shuffle-btn' onClick={handlePlay}>
               ▶ Play
             </button>
           ) : (
-            <button className='shuffle-btn' onClick={() => setHasPlayed(false)}>
+            <button className='shuffle-btn' onClick={handleShuffle}>
               ↺ Shuffle
             </button>
           )}
@@ -61,11 +91,9 @@ function Tarot({ onBack }){
       {/* GAME */}
       <div className='tarot-table'>
         <div className='card-anchor'>
-          {/* rendering 5 dummy cards */}
+          {/* rendering 5 cards */}
           {[0, 1, 2, 3, 4].map((index) => (
-            <div key={index} className='tarot-card-placeholder' style={getCardStyle(index)}>
-              <img src={tarotBackCard} alt="Back of Tarot Card" className='placeholder-back-img'/>
-            </div>
+            <TarotCard key={index} cardData={drawnCards[index]} style={getCardStyle(index)} isFanned={hasPlayed}/>
           ))}
         </div>
 

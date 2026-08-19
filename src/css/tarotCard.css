@@ -1,0 +1,50 @@
+.tarot-card-container{
+    position: absolute;
+    position: absolute;
+    width: 200px;
+    height: 310px;
+    cursor: pointer;
+    perspective: 1000px; /* Gives the flip a 3D pop */
+    transition: transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+    transform-origin: center center;
+}
+
+.tarot-card-inner{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d; /* tells the browser this is a 3D obj*/
+    transition: transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.tarot-card-inner.is-flipped{
+    transform: rotateY(180deg);
+}
+
+.tarot-back-card, .tarot-front-card{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden; /* hides the back side of the card when spun (hides the back side div) */
+    border-radius: 12px;
+    overflow: hidden;
+    -webkit-backface-visibility: hidden
+}
+
+.tarot-back-card{
+    border: 2px solid #F8D268;
+    padding: 2px;
+    background: linear-gradient(135deg, #FF3B30, #AF52DE, #34C759);
+}
+
+.tarot-front-card{
+    transform: rotateY(180deg); /* Start it flipped around so it faces the correct way when the inner wrapper spins */
+    background-color: #1A1A24;
+}
+
+.placeholder-back-img,
+.tarot-front-img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
