@@ -1,7 +1,7 @@
 import cardsJSON from './cards.json'
 
 const TIER_BY_ID = {
-    '01': 'rare',         // Ash Baby
+    '01': 'rare',         // Buff
     '02': 'mythical',     // Palambing
     '03': 'uncommon',     // Pinagpalit
     '04': 'rare',         // Bimby
@@ -10,13 +10,13 @@ const TIER_BY_ID = {
     '07': 'rare',         // Dog Flower
     '08': 'uncommon',     // Kayang Kaya
     '09': 'common',       // Laptop Kain
-    '10': 'common',       // Milo
+    '10': 'common',       // cram_mode
     '11': 'common',       // Miss U
     '12': 'rare',         // Monkeys
     '13': 'uncommon',     // Move On
     '14': 'common',       // Nagkaon
     '15': 'common',       // Mental Breakdown
-    '16': 'common',       // Posture Check
+    '16': 'common',       // Studying
     '17': 'veryrare',     // Relieved Tony
     '18': 'uncommon',     // Second Choice
     '19': 'rare',         // Shrek Swamp
@@ -27,7 +27,7 @@ const TIER_BY_ID = {
     '24': 'uncommon',     // Talking Stage
     '25': 'common',       // Walang Pera
     '26': 'legendary',    // Yayaman
-    '27': 'veryrare',     // ANOVA
+    '27': 'veryrare',     // Cat pass exam
     '28': 'veryrare',     // Kabisado
     '29': 'legendary',    // Youngstunna
     '30': 'legendary',    // Mang-aagaw
